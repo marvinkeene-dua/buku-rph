@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ms" data-theme="gelap">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Buku RPH</title>
+<meta name="description" content="Tulis, simpan dan cetak rancangan pengajaran harian (RPH) dengan semakan kelengkapan dan refleksi selepas kelas." />
+<meta name="theme-color" content="#0c0b0a" />
+<meta property="og:title" content="Buku RPH" />
+<meta property="og:description" content="Rancangan pengajaran harian untuk guru sekolah rendah: semakan kelengkapan, refleksi dan cetakan A4." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230c0b0a'/%3E%3Ccircle cx='16' cy='16' r='10.5' fill='none' stroke='%23d6bf8f' stroke-width='1.25'/%3E%3Ctext x='16' y='20.6' text-anchor='middle' font-family='Georgia,serif' font-size='13' fill='%23f3efe6'%3ER%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400..600&family=Jost:wght@300..600&display=swap" rel="stylesheet" />
+<script>
+  // Tetapkan tema sebelum cat pertama supaya tiada kelipan.
+  try {
+    var t = JSON.parse(localStorage.getItem('rph.v1.tema') || '"gelap"');
+    if (t === 'cerah' || t === 'gelap') document.documentElement.dataset.theme = t;
+  } catch (e) {}
+</script>
+</head>
+<body>
+<a class="skip" href="#utama">Langkau ke kandungan</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#senarai">
+      <span class="mark" aria-hidden="true">R</span>
+      <span class="brand__teks">
+        <b>Buku RPH</b>
+        <small id="brand-sub">Rancangan pengajaran harian</small>
+      </span>
+    </a>
+    <button class="iconbtn" type="button" data-action="tema" id="btn-tema" aria-label="Tukar tema"></button>
+    <button class="iconbtn" type="button" data-action="tetapan" aria-label="Tetapan"></button>
+    <a class="btn btn--primary btn--sm" href="#baru" id="btn-baru" aria-label="RPH baru">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      <span>RPH baru</span>
+    </a>
+  </div>
+</header>
+
+<main id="utama" tabindex="-1">
+  <div class="wrap" id="app">
+    <noscript><p style="padding:40px 0">Buku RPH memerlukan JavaScript.</p></noscript>
+  </div>
+</main>
+
+<div class="toasts" role="status" aria-live="polite" id="toasts"></div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

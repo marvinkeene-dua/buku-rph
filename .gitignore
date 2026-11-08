@@ -1,0 +1,9 @@
+node_modules
+dist
+test-results
+playwright-report
+.DS_Store
+*.log
+
+# Claude Code skill (dev tool, 39 MB of third-party assets)
+.claude/

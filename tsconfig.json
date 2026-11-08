@@ -1,0 +1,16 @@
+{
+  // Lapisan domain (src/lib) ditaip melalui JSDoc dan disemak secara ketat oleh tsc,
+  // tanpa langkah kompil. Lapisan DOM diliputi oleh ujian hujung ke hujung.
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "allowJs": true,
+    "checkJs": true,
+    "strict": true,
+    "noEmit": true,
+    "lib": ["ES2022", "DOM"],
+    "skipLibCheck": true
+  },
+  "include": ["src/lib/**/*.js"]
+}
